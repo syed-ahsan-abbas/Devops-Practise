@@ -7,4 +7,4 @@ jobs:
   runs-on: ubuntu-latest
   steps:
   - name: Greetings
-  run: echo"HEllo Doston"
+  run: echo "HEllo Doston"
