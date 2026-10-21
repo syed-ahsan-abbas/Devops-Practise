@@ -1,1 +1,10 @@
-
+name: Ahsan Abbas
+on:
+push:
+branches: [main]
+jobs:
+  workflow:
+  runs-on: ubuntu-latest
+  steps:
+  - name: Greetings
+  run: echo"HEllo Doston"
