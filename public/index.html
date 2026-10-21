@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DevOps Lab</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="top">
+    <h1>DevOps Lab</h1>
+    <p>A small app to build, ship, break and monitor.</p>
+  </header>
+  <main>
+    <section class="panel" aria-labelledby="t-h">
+      <h2 id="t-h">Release checklist</h2>
+      <form id="task-form">
+        <input id="task-input" placeholder="Add a step, e.g. Push image to registry" autocomplete="off" required>
+        <button type="submit">Add step</button>
+      </form>
+      <ul id="tasks"></ul>
+      <p id="empty" class="muted" hidden>No steps yet. Add the first one above.</p>
+    </section>
+    <section class="panel" aria-labelledby="r-h">
+      <h2 id="r-h">Runtime</h2>
+      <div class="status-row">
+        <span id="health-dot" class="dot"></span>
+        <span id="health-text">Checking…</span>
+        <button id="refresh" class="ghost">Refresh</button>
+      </div>
+      <dl id="info"></dl>
+      <p class="muted">Probes: <code>/health</code>, <code>/ready</code>. Metrics: <code>/metrics</code>.</p>
+      <div id="chaos" hidden>
+        <h3>Break things on purpose</h3>
+        <div class="btns">
+          <button data-chaos="crash" class="danger">Crash process</button>
+          <button data-chaos="unready" class="warn">Toggle readiness</button>
+          <button data-chaos="slow">Slow response (3s)</button>
+          <button data-chaos="load">Burn CPU (2s)</button>
+        </div>
+        <p id="chaos-out" class="muted" aria-live="polite"></p>
+      </div>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>

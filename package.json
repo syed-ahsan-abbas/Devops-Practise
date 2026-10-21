@@ -1,0 +1,16 @@
+{
+  "name": "devops-lab",
+  "version": "1.0.0",
+  "description": "Small full-stack app built purely for DevOps practice (CI/CD, Docker, K8s, monitoring).",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "test": "node --test"
+  },
+  "engines": { "node": ">=18" },
+  "dependencies": {
+    "express": "^4.19.2",
+    "prom-client": "^15.1.3"
+  }
+}

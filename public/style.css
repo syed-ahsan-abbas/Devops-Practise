@@ -1,0 +1,33 @@
+:root{--bg:#e9eef2;--panel:#fbfcfd;--ink:#16252f;--muted:#5d6f7b;--line:#cdd7de;--ok:#0f766e;--warn:#b7791f;--bad:#b42318;--brand:#1b4965}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 "Segoe UI",system-ui,-apple-system,Roboto,sans-serif}
+.top{background:var(--brand);color:#fff;padding:2rem max(1.25rem,calc((100% - 62rem)/2))}
+.top h1{margin:0;font-size:2rem;letter-spacing:-.01em}
+.top p{margin:.25rem 0 0;color:#c9dbe6}
+main{display:grid;grid-template-columns:1.2fr 1fr;gap:1.25rem;max-width:62rem;margin:1.5rem auto;padding:0 1.25rem}
+@media(max-width:760px){main{grid-template-columns:1fr}}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:1.25rem}
+h2{margin:0 0 .9rem;font-size:1.15rem}
+h3{margin:1.4rem 0 .6rem;font-size:1rem;border-top:1px solid var(--line);padding-top:1rem}
+form{display:flex;gap:.5rem;margin-bottom:.75rem}
+input[type=text],#task-input{flex:1;padding:.55rem .7rem;border:1px solid var(--line);border-radius:4px;font:inherit}
+button{padding:.5rem .9rem;border:1px solid var(--brand);background:var(--brand);color:#fff;border-radius:4px;font:inherit;cursor:pointer}
+button:hover{filter:brightness(1.12)}
+button.ghost{background:transparent;color:var(--brand);margin-left:auto}
+button.danger{background:var(--bad);border-color:var(--bad)}
+button.warn{background:var(--warn);border-color:var(--warn)}
+:focus-visible{outline:3px solid #5aa9d6;outline-offset:2px}
+ul{list-style:none;margin:0;padding:0}
+li{display:flex;align-items:center;gap:.6rem;padding:.55rem 0;border-bottom:1px solid var(--line)}
+li span{flex:1}
+li.done span{text-decoration:line-through;color:var(--muted)}
+li .del{background:transparent;color:var(--bad);border-color:transparent;padding:.2rem .5rem}
+.muted{color:var(--muted);font-size:.9rem}
+.status-row{display:flex;align-items:center;gap:.5rem;margin-bottom:.75rem}
+.dot{width:.8rem;height:.8rem;border-radius:50%;background:var(--muted)}
+.dot.up{background:var(--ok)}.dot.down{background:var(--bad)}
+dl{display:grid;grid-template-columns:auto 1fr;gap:.3rem 1rem;margin:0 0 .75rem}
+dt{color:var(--muted)}dd{margin:0;font-family:Consolas,Menlo,monospace;font-size:.9rem;word-break:break-all}
+.btns{display:flex;flex-wrap:wrap;gap:.5rem}
+code{background:#e3eaef;padding:.05rem .3rem;border-radius:3px}
+@media(prefers-reduced-motion:no-preference){.dot{transition:background .3s}}
