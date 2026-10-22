@@ -1,10 +1,10 @@
-name: Ahsan Abbas
-on:
+name: Devops Practise
+on: 
   push:
     branches: [main]
 jobs:
   workflow:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Greetings
-        run: echo "HEllo Doston"
+    run-on: ubuntu-latest
+      steps:
+    - name: Greetings
+      run: echo "Hello Doston:
