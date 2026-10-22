@@ -1,10 +1,10 @@
-name: Pipeline Check
-on:
+name: Check Pipeline
+on: 
   push:
     branches: [main]
-
 jobs:
-  runs-on: ubuntu-latest
-      steps:
-         - name: Greetings
-           run: echo "Hello"
+  workflow:
+	runs-on: ubuntu-latest
+	steps:
+	  - name: Greetings
+		run: echo "Hello"
