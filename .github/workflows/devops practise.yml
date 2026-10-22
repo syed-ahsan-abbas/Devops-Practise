@@ -3,7 +3,7 @@ on:
   push:
     branches: [main]
 jobs:
-  Pipeline: 
+  workflow: 
     runs-on: ubuntu-latest
     steps:
       - name: Salam
