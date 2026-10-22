@@ -2,8 +2,8 @@ name: Pipeline Check
 on:
   push:
     branches: [main]
+
 jobs:
-  workflow:
   runs-on: ubuntu-latest
   steps:
   - name: Greetings
