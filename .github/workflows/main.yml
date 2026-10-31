@@ -1,0 +1,6 @@
+stages:
+  deploye:
+image_test:
+  image: python 3.14
+  description:
+  - run: echo "deploye image"
