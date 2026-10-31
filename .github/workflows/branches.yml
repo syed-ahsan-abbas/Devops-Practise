@@ -1,6 +1,6 @@
 variables:
   APP_IMAGE: "RYZON SPORTS"
-  ENVIRONMNET: "VM"
+  ENVIRONMNET:"VM"
 
 Stage_Deploye:
   run-name: 
