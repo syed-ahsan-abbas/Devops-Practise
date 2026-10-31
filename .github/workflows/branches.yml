@@ -1,0 +1,8 @@
+variables:
+  APP_IMAGE: "RYZON SPORTS"
+  ENVIRONMNET: "VM"
+
+Stage_Deploye:
+  run-name: 
+    - echo $APP_IMAGE
+    - echo $ENVIRONMENT
