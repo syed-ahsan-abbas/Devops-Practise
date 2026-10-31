@@ -1,0 +1,22 @@
+stages:
+  - test:
+  - security:
+  - build:
+
+Test_Stage:
+  stage: test
+  description:
+    - echo "Running Test Builds"
+    - echo "Running Test"
+
+Security_Stage:
+  stage: security
+  description:
+    - echo "Running Security"
+    - echo "Running Security checks"
+
+Deploye_Stage:
+  stage: build
+  description: 
+    - echo "Hello Doston"
+
