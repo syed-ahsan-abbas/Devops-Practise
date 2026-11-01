@@ -1,0 +1,30 @@
+stages:
+  - build:
+  - security:
+  -  Deploye:
+
+Artifacts:
+  APP_IMAGE: "Devsecops_APP"
+  ENVIRONMENT: "Staging"
+
+Build_Check:
+  stage: build
+  image: alpine:3.21
+  Artifacts:
+    - echo "Hello Doston"
+    mkdir -p Test_File
+    - echo "Test is Passed" > Test_File/test.txt
+    - echo cat "Test_File/test.txt"
+
+  Security_Check:
+    stage: alpine:3.21
+    description:
+      - echo "This is security Check"
+
+    Deploye_Time:
+      stage: deploye
+      image: alpine:3.21
+      - echo "Deploye Done"
+
+  
+    
